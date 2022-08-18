@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/basic9"
+    tools:context=".ui.GameActivity">
+
+    <LinearLayout
+        android:id="@+id/game_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#16741A"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/current_level"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:text="Level 3"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total_score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:text="💰 230"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/delta_score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:text="🪙 +10"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_group_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        app:cardBackgroundColor="#16741A"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_state">
+
+        <RelativeLayout
+            android:id="@+id/image_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image1"
+                style="@style/game_image_style"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <ImageView
+                android:id="@+id/image2"
+                style="@style/game_image_style"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/image1" />
+
+            <ImageView
+                android:id="@+id/image3"
+                style="@style/game_image_style"
+                android:layout_below="@+id/image1"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/image4"
+                style="@style/game_image_style"
+                android:layout_below="@id/image2"
+                android:layout_toEndOf="@id/image3" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/answer_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_group_card">
+
+        <Button
+            style="@style/answer_button_style"
+
+            android:text="A" />
+
+        <Button
+            style="@style/answer_button_style"
+            android:text="A" />
+
+        <Button
+            style="@style/answer_button_style"
+            android:text="A" />
+
+        <Button
+            style="@style/answer_button_style"
+            android:text="A" />
+
+        <Button
+            style="@style/answer_button_style"
+            android:text="A" />
+
+        <Button
+            style="@style/answer_button_style"
+            android:text="A" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/variant_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer_group"
+        app:layout_constraintVertical_bias="0.3">
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/variant_style"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="2dp" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/variant_style"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="2dp"
+            android:layout_toEndOf="@id/btn1" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/variant_style"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="2dp"
+            android:layout_toEndOf="@id/btn2" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/variant_style"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="2dp"
+            android:layout_toEndOf="@id/btn3" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/variant_style"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="2dp"
+            android:layout_toEndOf="@id/btn4" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/variant_style"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="2dp"
+            android:layout_toEndOf="@id/btn5" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/variant_style"
+            android:layout_below="@+id/btn1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/variant_style"
+            android:layout_below="@+id/btn2"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/btn7" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/variant_style"
+            android:layout_below="@+id/btn3"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/btn8" />
+
+        <Button
+            android:id="@+id/btn10"
+            style="@style/variant_style"
+            android:layout_below="@+id/btn4"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/btn9" />
+
+        <Button
+            android:id="@+id/btn11"
+            style="@style/variant_style"
+            android:layout_below="@+id/btn5"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/btn10" />
+
+        <Button
+            android:id="@+id/btn12"
+            style="@style/variant_style"
+            android:layout_below="@+id/btn6"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/btn11" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_1"
+            android:text=" 🧹 Clear    "
+            android:textAllCaps="false"
+            android:textColor="#FFFF"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/strong_help_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_1"
+            android:text="🎁"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/weak_help_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_1"
+            android:text="💡"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

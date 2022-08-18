@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_dialog"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#28702B"
+    android:orientation="vertical"
+    app:cardCornerRadius="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/setting_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setting"
+            android:textColor="#FFB300"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/sound_switch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+
+        <Switch
+            android:id="@+id/sound_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Sound  off"
+            android:textColor="#FFB300"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setting_view" />
+
+        <TextView
+            android:id="@+id/themes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Themes"
+            android:textColor="#FFB300"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sound_switch" />
+
+
+        <RadioGroup
+            android:id="@+id/themes_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/themes">
+
+            <RadioButton
+                android:id="@+id/theme1"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/basic11" />
+
+            <RadioButton
+                android:id="@+id/theme2"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/basic8" />
+
+            <RadioButton
+                android:id="@+id/theme3"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/basic7" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

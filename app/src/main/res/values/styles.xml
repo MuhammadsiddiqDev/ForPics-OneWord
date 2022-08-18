@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="game_image_style">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_margin">1.5dp</item>
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">170dp</item>
+    </style>
+
+    <style name="answer_button_style">
+        <item name="android:background">#16741A</item>
+        <item name="android:layout_width">58dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="variant_style">
+
+        <item name="android:textSize">20dp</item>
+        <item name="android:text">V</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/shape_2</item>
+        <item name="android:layout_width">53dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+</resources>
